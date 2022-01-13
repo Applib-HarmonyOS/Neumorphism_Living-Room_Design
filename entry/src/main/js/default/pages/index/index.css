@@ -1,0 +1,668 @@
+@font-face {
+    font-family: poppins-semibold;
+    src: url('/common/poppins/Poppins-SemiBold.otf');
+}
+
+@font-face {
+    font-family: poppins-regular;
+    src: url('/common/poppins/Poppins-Regular.otf');
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url('/common/poppins/Poppins-Medium.otf');
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url('/common/poppins/Poppins-Bold.otf');
+}
+
+.bold{
+    font-family: poppins-bold;
+}
+
+.semi_bold{
+    font-family: poppins-semibold;
+}
+
+.medium{
+    font-family: poppins-medium;
+}
+
+.regular{
+    font-family: poppins-regular;
+}
+
+.dark_text{
+    color: #22304A;
+}
+
+.light_text{
+    color: #7888A2;
+}
+
+.lighter_text{
+    color: #AABAD4;
+}
+
+.theme_text{
+    color: #0099FF;
+}
+
+.theme_bg{
+    background-color: #0099FF;
+}
+
+.body_bg{
+    background-color: #FFFFFF;
+}
+
+.container_bg{
+    background-color: #ECF0F3;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.container{
+    padding: 20px;
+    overflow: hidden ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.main{
+    width: 600px;
+    overflow: scroll;
+    scrollbar-width: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user .avatar{
+    width: 120px;
+    height: 100px;
+}
+
+.user .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user .info .name{
+    font-size: 20px;
+}
+
+.user .info .message{
+    font-size: 18px;
+}
+
+.rooms{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.rooms .room{
+    margin-left: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rooms .room .slider{
+    width: 50px;
+    height: 30px;
+}
+
+.controls{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .main_control{
+    background-image: url("common/images/main_control_bg.png");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .main_control .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .main_control .header .icon{
+    width: 60px;
+    height: 60px;
+}
+
+.controls .main_control .header .title{
+    font-size: 15px;
+    margin: 0 10px;
+    width: 50%;
+}
+
+.controls .main_control .header .toggle{
+    width: 50px;
+    height: 40px;
+}
+
+.controls .main_control .controller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .main_control .controller .level, .minus, .plus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.controls .main_control .controller .minus, .plus{
+    width: 50px;
+    height: 50px;
+}
+
+.controls .main_control .modes image{
+    width: 65px;
+    height: 65px;
+}
+
+.controls .main_control .controller .level .range{
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("common/images/range.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.controls .main_control .controller .level .range .curve_bg{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("common/images/curve_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.controls .main_control .controller .level .range .curve_bg .progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.controls .main_control .controller .level .range .curve_bg .progress .progress_bar{
+    margin:5px;
+    stroke-width: 12px;
+    background-color: transparent;
+    transform: rotate(-120deg);
+}
+
+.controls .main_control .controller .level .range .curve_bg .progress .value{
+    width: 90px;
+    height: 95px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("common/images/value_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.controls .main_control .controller .level .range .curve_bg .progress .value .header{
+    font-size: 12px;
+}
+
+.controls .main_control .controller .level .range .curve_bg .progress .value .footer{
+    font-size: 7px;
+}
+
+.controls .other_controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .other_controls .device{
+    background-image: url("common/images/other_controls.png");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .other_controls .device .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.controls .other_controls .device .icon image{
+    width: 30px;
+    height: 30px;
+}
+
+.controls .other_controls .device .slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.controls .other_controls .device .slider .progress_bar{
+    background-color: #ffffff;
+    width: 150px;
+    stroke-width: 10px;
+}
+
+.controls .other_controls .device .icon2{
+    width: 25px;
+    height: 25px;
+}
+
+.devices{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.devices .title{
+    font-size: 20px;
+    width: 70%;
+}
+
+.devices .add_device{
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.devices .add_device .icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.device_list{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device_list .device{
+    background-image: url("common/images/device.png");
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.device_list .active_device{
+    color: #ffffff;
+    background-image: url("common/images/active_device.png");
+}
+
+.device_list .device .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.device_list .device .header .icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+}
+
+.device_list .device .header .toggle{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    right: 0px;
+}
+
+.device_list .device .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 100%;
+    height: 30%;
+}
+
+.device_list .device .footer .name{
+    position: absolute;
+    left: 0px;
+    width: 90%;
+    overflow: hidden ;
+}
+
+.device_list .device .footer .on_off{
+    position: absolute;
+    right: 0px;
+}
+
+.sidebar{
+    overflow: scroll;
+    scrollbar-width: 0px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather_graph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather_graph .graph{
+    margin-right: 15px;
+    background-image: url('common/images/graph_bg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-size: 11px;
+    padding: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+}
+
+.weather_graph .title, .value, .visualizer{
+    margin:2px;
+}
+
+.weather_graph .temperature .visualizer{
+    background-image: url('common/images/temperature_range.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30px;
+}
+
+.weather_graph .humidity .visualizer{
+    background-image: url('common/images/bar_graph.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather_graph .humidity .visualizer image{
+    width: 50px;
+    height: 25px;
+}
+
+.live{
+    background-image: url('common/images/live_bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    padding: 15px;
+}
+
+.live .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.live .header .icon{
+    width: 50px;
+    height: 50px;
+}
+
+.live .header .title{
+    margin-left: 10px;
+    width: 80%;
+    overflow: hidden ;
+    font-size: 10px;
+}
+
+.live .header .toggle{
+    width: 50px;
+    height: 25px;
+}
+
+.live .carousel{
+    width: 100%;
+    height: 120px;
+    margin:10px;
+}
+
+.live .carousel .swiper{
+    indicator-color: #ffffff;
+    indicator-selected-color: #0098FD;
+    indicator-size: 5px;
+    indicator-bottom: 0px;
+}
+
+.live .carousel .swiper image{
+    border-radius: 10px;
+}
+
+.live .carousel .header{
+    position: absolute;
+    width: 100%;
+    margin:10px;
+}
+
+.live .carousel .header .icon{
+    width: 40px;
+    height: 15px;
+    position: absolute;
+    left: 0px;
+}
+
+.live .carousel .header .time{
+    font-size: 10px;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+}
+
+.weather_warning{
+    background-image: url('common/images/live_bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    width: 280px;
+    padding: 20px;
+}
+
+.weather_warning .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.weather_warning .header .icon{
+    width: 60px;
+    height: 60px;
+}
+
+.weather_warning .header .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.weather_warning .header .title .location{
+    display: flex;
+    align-items: center;
+}
+
+.weather_warning .header .title .location .icon{
+    width: 8px;
+    height: 11px;
+    margin-right: 5px;
+}
+
+.weather_warning .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.weather_warning .buttons .day{
+    width: 60px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.weather_warning .buttons .week{
+    margin-left: 10px;
+    width: 65px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('common/images/button.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.weather_warning .weather{
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather_warning .weather .info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather_warning .weather .info .date{
+    font-size: 8px;
+}
+
+.weather_warning .weather .info .temperature{
+    font-size: 20px;
+    margin: 2px 0;
+}
+
+.weather_warning .weather .info .weather_type{
+    font-size: 10px;
+}
+
+.weather_warning .weather .clouds{
+    width: 50%;
+}
+
+.weather_warning .footer{
+    padding: 15px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (device-type: phone){
+    .sidebar{
+        visibility: hidden;
+    }
+}
+
+@media (device-type: wearable){
+    .sidebar{
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,361 @@
+<div class="body body_bg">
+    <div class="container container_bg">
+        <div class="main">
+            <div class="user">
+                <div class="avatar">
+                    <image src="common/images/user.png"></image>
+                </div>
+                <div class="info">
+                    <div class="name semi_bold dark_text">
+                        <text>Good Morning, Username</text>
+                    </div>
+                    <div class="message regular light_text">
+                        <text>Have a nice day</text>
+                    </div>
+                </div>
+            </div>
+            <div class="rooms">
+                <div class="room semi_bold dark_text">
+                    <text>Living Room</text>
+                    <div class="slider">
+                        <image src="common/images/slider.png"></image>
+                    </div>
+                </div>
+                <div class="room regular light_text">
+                    <text>Dining Room</text>
+                    <div class="slider">
+<!--                        <image src="common/images/slider.png"></image>-->
+                    </div>
+                </div>
+                <div class="room regular light_text">
+                    <text>Bed Room</text>
+                    <div class="slider">
+<!--                        <image src="common/images/slider.png"></image>-->
+                    </div>
+                </div>
+                <div class="room regular light_text">
+                    <text>Bath Room</text>
+                    <div class="slider">
+<!--                        <image src="common/images/slider.png"></image>-->
+                    </div>
+                </div>
+                <div class="room regular light_text">
+                    <text>Backyard</text>
+                    <div class="slider">
+<!--                        <image src="common/images/slider.png"></image>-->
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                    <div class="main_control">
+                        <div class="header">
+                            <div class="icon">
+                                <image src="common/images/ac.png"></image>
+                            </div>
+                            <div class="title semi_bold dark_text">
+                                <text>Living Room</text>
+                            </div>
+                            <div class="toggle" onclick="toggle_living_room">
+                                <image if="{{living_room}}" src="common/images/switch_on.png"></image>
+                                <image else src="common/images/switch_off.png"></image>
+                            </div>
+                        </div>
+                        <div class="controller">
+                            <div class="minus semi_bold light_text">
+                                <text>05&deg;C</text>
+                                <image src="common/images/minus.png"></image>
+                            </div>
+                            <div class="level semi_bold light_text">
+                                <text>10&deg;C</text>
+                                <div class="range">
+                                    <div class="curve_bg">
+                                        <div class="progress">
+                                            <progress class="progress_bar theme_text" type="ring" percent= "50"></progress>
+                                            <div class="value">
+                                                <div class="header semi_bold dark_text">
+                                                    <text>18&deg;C</text>
+                                                </div>
+                                                <div class="footer regular light_text">
+                                                    <text>Celcius</text>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plus semi_bold light_text">
+                                <text>25&deg;C</text>
+                                <image src="common/images/plus.png"></image>
+                            </div>
+                        </div>
+                        <div class="modes">
+                            <div class="dry">
+                                <image src="common/images/dry_mode.png"></image>
+                            </div>
+                            <div class="cool">
+                                <image src="common/images/cool_mode.png"></image>
+                            </div>
+                            <div class="fan">
+                                <image src="common/images/fan_mode.png"></image>
+                            </div>
+                            <div class="turbo">
+                                <image src="common/images/turbo_mode.png"></image>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other_controls">
+                        <div class="device">
+                            <div class="icon medium light_text">
+                                <image src="common/images/lamp.png"></image>
+                                <text>Lamp 1</text>
+                            </div>
+                            <div class="slider">
+                                <progress class="progress_bar theme_text" type="horizontal" percent= "40"></progress>
+                            </div>
+                            <div class="icon2">
+                                <image src="common/images/brightness.png"></image>
+                            </div>
+                        </div>
+                        <div class="device">
+                            <div class="icon medium light_text">
+                                <image src="common/images/lamp.png"></image>
+                                <text>Lamp 1</text>
+                            </div>
+                            <div class="slider">
+                                <progress class="progress_bar theme_text" type="horizontal" percent= "80"></progress>
+                            </div>
+                            <div class="icon2">
+                                <image src="common/images/brightness.png"></image>
+                            </div>
+                        </div>
+                        <div class="device">
+                            <div class="icon medium light_text">
+                                <image src="common/images/fan.png"></image>
+                                <text>Lamp 1</text>
+                            </div>
+                            <div class="slider">
+                                <progress class="progress_bar theme_text" type="horizontal" percent= "80"></progress>
+                            </div>
+                            <div class="icon2">
+                                <image src="common/images/fan_speed.png"></image>
+                            </div>
+                        </div>
+                        <div class="device">
+                            <div class="icon medium light_text">
+                                <image src="common/images/fan.png"></image>
+                                <text>Lamp 1</text>
+                            </div>
+                            <div class="slider">
+                                <progress class="progress_bar theme_text" type="horizontal" percent= "20"></progress>
+                            </div>
+                            <div class="icon2">
+                                <image src="common/images/fan_speed.png"></image>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="devices">
+                <div class="title semi_bold dark_text">
+                    <text>Devices</text>
+                </div>
+                <div class="add_device semi_bold theme_bg">
+                    <div class="icon">
+                        <image src="common/images/add_new.png"></image>
+                    </div>
+                    <text>New Devices</text>
+                </div>
+            </div>
+            <div class="device_list">
+                <div class="device">
+                    <div class="header">
+                        <div class="icon">
+                            <image src="common/images/smart_tv.png"></image>
+                        </div>
+                        <div class="toggle" onclick="toggle_smart_tv1">
+                            <image if="{{smart_tv1}}" src="common/images/switch_off.png"></image>
+                            <image else src="common/images/switch_on.png"></image>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="name semi_bold light_text">
+                            <text>SmartTV 1</text>
+                        </div>
+                        <div class="on_off semi_bold theme_text">
+                            <text if="{{smart_tv1}}">OFF</text>
+                            <text else>ON</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="device active_device">
+                    <div class="header">
+                        <div class="icon">
+                            <image src="common/images/ac_selected.png"></image>
+                        </div>
+                        <div class="toggle" onclick="toggle_ac">
+                            <image if="{{ac}}" src="common/images/switch_on_active_device.png"></image>
+                            <image else src="common/images/switch_off_active_device.png"></image>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="name semi_bold">
+                            <text>AC</text>
+                        </div>
+                        <div class="on_off semi_bold">
+                            <text if="{{ac}}">ON</text>
+                            <text else>OFF</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="device">
+                    <div class="header">
+                        <div class="icon">
+                            <image src="common/images/washing_machine.png"></image>
+                        </div>
+                        <div class="toggle" onclick="toggle_washing_machine">
+                            <image if="{{washing_machine}}" src="common/images/switch_off.png"></image>
+                            <image else src="common/images/switch_on.png"></image>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="name semi_bold light_text">
+                            <text>Washing Machine</text>
+                        </div>
+                        <div class="on_off semi_bold theme_text">
+                            <text if="{{washing_machine}}">OFF</text>
+                            <text else>ON</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="device">
+                    <div class="header">
+                        <div class="icon">
+                            <image src="common/images/fridge.png"></image>
+                        </div>
+                        <div class="toggle" onclick="toggle_refrigerator">
+                            <image if="{{refrigerator}}" src="common/images/switch_off.png"></image>
+                            <image else src="common/images/switch_on.png"></image>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="name semi_bold light_text">
+                            <text>Refrigerator</text>
+                        </div>
+                        <div class="on_off semi_bold theme_text">
+                            <text if="{{refrigerator}}">OFF</text>
+                            <text else>ON</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="weather_graph">
+                <div class="graph temperature">
+                    <div class="title medium light_text">
+                        <text>Temperature</text>
+                    </div>
+                    <div class="value semi_bold light_text">
+                        <text>+18&deg;C</text>
+                    </div>
+                    <div class="visualizer">
+                    </div>
+                </div>
+                <div class="graph humidity ">
+                    <div class="title medium light_text">
+                        <text>Humidity</text>
+                    </div>
+                    <div class="value semi_bold light_text">
+                        <text>30%</text>
+                    </div>
+                    <div class="visualizer">
+                        <image src="common/images/graph_line.png"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="live">
+                <div class="header">
+                    <div class="icon">
+                        <image src="common/images/camera.png"></image>
+                    </div>
+                    <div class="title semi_bold dark_text">
+                        <text>Backyard Camera</text>
+                    </div>
+                    <div class="toggle" onclick="toggle_backyard_camera">
+                        <image if="{{backyard_camera}}" src="common/images/switch_on.png"></image>
+                        <image else src="common/images/switch_off.png"></image>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <swiper class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false" cachedsize="-1" scrolleffect="spring">
+                        <div class = "swiperContent1" >
+                            <image src="common/images/backyard.jpg"></image>
+                        </div>
+                        <div class = "swiperContent2" >
+                            <image src="common/images/living_room_1.jpg"></image>
+                        </div>
+                        <div class = "swiperContent3" >
+                            <image src="common/images/living_room_2.jpg"></image>
+                        </div>
+                        <div class = "swiperContent4" >
+                            <image src="common/images/living_room_3.jpg"></image>
+                        </div>
+                    </swiper>
+                    <div class="header">
+                        <div class="icon">
+                            <image src="common/images/live.png"></image>
+                        </div>
+                        <div class="time">
+                            <text>20/12 00:01:09</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather_warning">
+                <div class="header">
+                    <div class="icon">
+                        <image src="common/images/weather_warning.png"></image>
+                    </div>
+                    <div class="title">
+                        <div class="warning semi_bold dark_text">
+                            <text>Weather Warning</text>
+                        </div>
+                        <div class="location regular light_text">
+                            <div class="icon">
+                                <image src="common/images/location_icon.png"></image>
+                            </div>
+                            <text>Bangalore</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="day medium theme_bg">
+                        <text>Day</text>
+                    </div>
+                    <div class="week medium lighter_text">
+                        <text>Week</text>
+                    </div>
+                </div>
+                <div class="weather">
+                    <div class="info">
+                        <div class="date bold light_text">
+                            <text>Sat, Dec 20</text>
+                        </div>
+                        <div class="temperature bold light_text">
+                            <text>18&deg;C</text>
+                        </div>
+                        <div class="weather_type medium lighter_text">
+                            <text>Rainy</text>
+                        </div>
+                    </div>
+                    <div class="clouds">
+                        <image src="common/images/rain.png"></image>
+                    </div>
+                </div>
+                <div class="footer medium light_text">
+                    <text>Heavy Rain!</text>
+                    <text>Remember to bring an umbrella</text>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
