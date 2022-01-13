@@ -1,8 +1,8 @@
 # Neumorphism_Living_Room_Design
 
-<p float="left">
-<img src="sample_images/phone.png" width="" height="">
-<img src="sample_images/matepad.png" width="" height="">
+<p float="left" >
+<img src="sample_images/phone.png" width="200px" height="">
+<img src="sample_images/matepad.png" width="500px" height="">
 </p>
 
 # Reference:
