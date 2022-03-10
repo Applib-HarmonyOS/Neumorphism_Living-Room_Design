@@ -6,7 +6,7 @@ apply plugin: "org.sonarqube"
 ohos {
     compileSdkVersion 6
 }
-	
+    
 buildscript {
     repositories {
         maven {
@@ -19,7 +19,7 @@ buildscript {
     dependencies {
         classpath 'com.huawei.ohos:hap:3.0.3.4'
         classpath 'com.huawei.ohos:decctest:1.2.6.0'
-	classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
     }
 }
 
@@ -35,7 +35,7 @@ allprojects {
 }
 sonarqube {
     properties {
-        property "sonar.projectKey", "Neumorphism_Living-Room_Design"
+        property "sonar.projectKey", "applibgroup_Neumorphism_Living-Room_Design"
         property "sonar.organization", "applibgroup"
         property "sonar.host.url", "https://sonarcloud.io/"
         property "sonar.sources", "entry/src"
