@@ -9,6 +9,7 @@ jobs:
     runs-on: windows-latest
     name: Build and Analyse
     steps:
+      - run: git config --system core.longpaths true
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
