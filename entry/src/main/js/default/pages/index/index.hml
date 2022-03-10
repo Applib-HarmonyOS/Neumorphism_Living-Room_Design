@@ -1,19 +1,19 @@
-<element name='neutheme' src='../node_modules/hmos-neumorphism/theme/theme.hml'></element>
-<element name='neualert' src='../node_modules/hmos-neumorphism/alert/alert.hml'></element>
-<element name='neuavatar' src='../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
-<element name='neubutton' src='../node_modules/hmos-neumorphism/button/button.hml'></element>
-<element name='neubuttons' src='../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
-<element name='neucard' src='../node_modules/hmos-neumorphism/card/card.hml'></element>
-<element name='neucheckbox' src='../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
-<element name='neudropdown' src='../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
-<element name='neuform' src='../node_modules/hmos-neumorphism/form/form.hml'></element>
-<element name='neuinput' src='../node_modules/hmos-neumorphism/input/input.hml'></element>
-<element name='neulabel' src='../node_modules/hmos-neumorphism/label/label.hml'></element>
-<element name='neunavbar' src='../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
-<element name='neupagination' src='../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
-<element name='neuprogress' src='../node_modules/hmos-neumorphism/progress/progress.hml'></element>
-<element name='neuradio' src='../node_modules/hmos-neumorphism/radio/radio.hml'></element>
-<element name='neuswitcher' src='../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
+<element name='neutheme' src='../../../../../../node_modules/hmos-neumorphism/theme/theme.hml'></element>
+<element name='neualert' src='../../../../../../node_modules/hmos-neumorphism/alert/alert.hml'></element>
+<element name='neuavatar' src='../../../../../../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
+<element name='neubutton' src='../../../../../../node_modules/hmos-neumorphism/button/button.hml'></element>
+<element name='neubuttons' src='../../../../../../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
+<element name='neucard' src='../../../../../../node_modules/hmos-neumorphism/card/card.hml'></element>
+<element name='neucheckbox' src='../../../../../../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
+<element name='neudropdown' src='../../../../../../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
+<element name='neuform' src='../../../../../../node_modules/hmos-neumorphism/form/form.hml'></element>
+<element name='neuinput' src='../../../../../../node_modules/hmos-neumorphism/input/input.hml'></element>
+<element name='neulabel' src='../../../../../../node_modules/hmos-neumorphism/label/label.hml'></element>
+<element name='neunavbar' src='../../../../../../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
+<element name='neupagination' src='../../../../../../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
+<element name='neuprogress' src='../../../../../../node_modules/hmos-neumorphism/progress/progress.hml'></element>
+<element name='neuradio' src='../../../../../../node_modules/hmos-neumorphism/radio/radio.hml'></element>
+<element name='neuswitcher' src='../../../../../../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
 
 <div class="body">
     <neutheme class="container" theme="light_theme">
@@ -129,7 +129,7 @@
                             <text>Lamp 1</text>
                         </div>
                         <div class="other_controls_slider">
-                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "40"></progress>
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp1_p}}"></progress>
                         </div>
                         <div class="other_controls_icon2">
                             <image src="common/images/brightness.png"></image>
@@ -141,7 +141,7 @@
                             <text>Lamp 2</text>
                         </div>
                         <div class="other_controls_slider">
-                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "80"></progress>
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp2_p}}"></progress>
                         </div>
                         <div class="other_controls_icon2">
                             <image src="common/images/brightness.png"></image>
@@ -153,7 +153,7 @@
                             <text>Fan 1</text>
                         </div>
                         <div class="other_controls_slider">
-                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "80"></progress>
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan1_p}}"></progress>
                         </div>
                         <div class="other_controls_icon2">
                             <image src="common/images/fan_speed.png"></image>
@@ -165,7 +165,7 @@
                             <text>Fan 2</text>
                         </div>
                         <div class="other_controls_slider">
-                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "20"></progress>
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan2_p}}"></progress>
                         </div>
                         <div class="other_controls_icon2">
                             <image src="common/images/fan_speed.png"></image>
@@ -271,7 +271,7 @@
                             <text>Temperature</text>
                         </div>
                         <div class="weather_value semi_bold light_text">
-                            <text>+18&deg;C</text>
+                            <text>+{{temperature}}&deg;C</text>
                         </div>
                         <div class="temperature_visualizer">
                         </div>
@@ -283,7 +283,7 @@
                             <text>Humidity</text>
                         </div>
                         <div class="weather_value semi_bold light_text">
-                            <text>30%</text>
+                            <text>{{humidity}}%</text>
                         </div>
                         <div class="humidity_visualizer">
                             <image src="common/images/graph_line.png"></image>
@@ -342,7 +342,7 @@
                                 <div class="weather_warning_location_icon">
                                     <image src="common/images/location_icon.png"></image>
                                 </div>
-                                <text>Bangalore</text>
+                                <text>{{location}}</text>
                             </div>
                         </div>
                     </div>
@@ -357,13 +357,13 @@
                     <div class="weather_warning_weather">
                         <div class="weather_warning_info">
                             <div class="weather_warning_date bold light_text">
-                                <text>Sat, Dec 20</text>
+                                <text>{{day}}</text>
                             </div>
                             <div class="weather_warning_temperature bold light_text">
                                 <text>18&deg;C</text>
                             </div>
                             <div class="weather_warning_weather_type medium lighter_text">
-                                <text>Rainy</text>
+                                <text>{{weather}}</text>
                             </div>
                         </div>
                         <div class="weather_warning_clouds">
@@ -371,8 +371,8 @@
                         </div>
                     </div>
                     <div class="weather_warning_footer medium light_text">
-                        <text>Heavy Rain!</text>
-                        <text>Remember to bring an umbrella</text>
+                        <text>{{alert_title}}</text>
+                        <text>{{alert_desc}}</text>
                     </div>
                 </div>
             </neucard>

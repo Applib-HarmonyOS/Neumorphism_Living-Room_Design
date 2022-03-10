@@ -349,7 +349,7 @@
 .add_device_icon{
     width: 30px;
     height: 30px;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 .device_list{
