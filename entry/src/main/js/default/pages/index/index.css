@@ -660,7 +660,7 @@
 }
 
 .weather_warning_footer{
-    padding: 15px;
+    margin-top:10px;
     font-size: 10px;
     display: flex;
     flex-direction: column;

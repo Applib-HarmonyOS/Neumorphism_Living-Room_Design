@@ -25,8 +25,9 @@ export default {
         temperature: 0,
         humidity: 0,
         location: "Bangalore",
+        temperatureInCelcius:"18",
         weather: "Rainy",
-        day: "Mob, Jan 01",
+        day: "Mon, Jan 01",
         alert_title: "Title",
         alert_desc: "Description"
     },
@@ -149,8 +150,8 @@ export default {
             {
                 data = JSON.parse(resp.data);
             },
-            fail:(data,code) => {
-                console.log("fail data:"+ JSON.stringify(data));
+            fail:(err,code) => {
+                console.log("fail data:"+ JSON.stringify(err));
                 console.log("fail code:"+ code)
             },
             complete: ()=>{
@@ -177,15 +178,37 @@ export default {
                 this.temperature = data.temperature;
                 this.humidity = data.humidity;
                 this.location = data.location;
-                this.weather = data.weather;
-                this.day = data.day;
                 this.alert_title = data.alert_title;
                 this.alert_desc = data.alert_desc;
             }
         })
+        fetch.fetch({
+            url:'https://weatherdbi.herokuapp.com/data/weather/bangalore',
+            responseType:"json",
+            method: 'GET',
+            success:function(resp)
+            {
+                data = JSON.parse(resp.data);
+            },
+            fail:(err,code) => {
+                console.log("fail data:"+ JSON.stringify(err));
+                console.log("fail code:"+ code)
+            },
+            complete: ()=>{
+                this.temperatureInCelcius = data.currentConditions.temp.c;
+                this.weather = data.currentConditions.comment;
+            }
+        })
+        const date = new Date();
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        let month = monthNames[date.getMonth()]
+        let week = weekDays[date.getDay()]
+        this.day=week+", "+month+(String(date.getDate()))
     },
     onInit(){
         this.fetchData();
-        setInterval(this.fetchDateAndTime, 1000);
     }
 }

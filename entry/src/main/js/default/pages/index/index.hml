@@ -360,7 +360,7 @@
                                 <text>{{day}}</text>
                             </div>
                             <div class="weather_warning_temperature bold light_text">
-                                <text>18&deg;C</text>
+                                <text>{{temperatureInCelcius}}&deg;C</text>
                             </div>
                             <div class="weather_warning_weather_type medium lighter_text">
                                 <text>{{weather}}</text>
