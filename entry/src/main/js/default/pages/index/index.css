@@ -1,56 +1,56 @@
 @font-face {
-    font-family: 'poppins-semibold';
+    font-family: poppins-semibold;
     src: url('/common/poppins/Poppins-SemiBold.otf');
 }
 
 @font-face {
-    font-family: 'poppins-regular';
+    font-family: poppins-regular;
     src: url('/common/poppins/Poppins-Regular.otf');
 }
 
 @font-face {
-    font-family: 'poppins-medium';
+    font-family: poppins-medium;
     src: url('/common/poppins/Poppins-Medium.otf');
 }
 
 @font-face {
-    font-family: 'poppins-bold';
+    font-family: poppins-bold;
     src: url('/common/poppins/Poppins-Bold.otf');
 }
 
 .bold{
-    font-family: 'poppins-bold', sans-serif;
+    font-family: poppins-bold;
 }
 
-.semi-bold{
-    font-family: 'poppins-semibold', sans-serif;
+.semi_bold{
+    font-family: poppins-semibold;
 }
 
 .medium{
-    font-family: 'poppins-medium', sans-serif;
+    font-family: poppins-medium;
 }
 
 .regular{
-    font-family: 'poppins-regular', sans-serif;
+    font-family: poppins-regular;
 }
 
-.dark-text{
+.dark_text{
     color: #22304A;
 }
 
-.light-text{
+.light_text{
     color: #7888A2;
 }
 
-.lighter-text{
+.lighter_text{
     color: #AABAD4;
 }
 
-.theme-text{
+.theme_text{
     color: #0099FF;
 }
 
-.theme-bg{
+.theme_bg{
     background-color: #0099FF;
     color: #ffffff;
 }
@@ -79,6 +79,8 @@
 
 .main{
     width: 600px;
+    overflow: scroll;
+    scrollbar-width: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,24 +93,24 @@
     flex-wrap: wrap;
 }
 
-.user-avatar{
+.user_avatar{
     width:80px;
     height:80px;
     border-radius:50px;
     margin-right: 40px;
 }
 
-.user-info{
+.user_info{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.user-name{
+.user_name{
     font-size: 20px;
 }
 
-.user-message{
+.user_message{
     font-size: 18px;
 }
 
@@ -118,7 +120,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow: scroll;
 }
 
 .rooms .room{
@@ -129,7 +131,7 @@
     align-items: center;
 }
 
-.active-room-indicator{
+.active_room_indicator{
     width: 50px;
     height: 30px;
 }
@@ -141,38 +143,38 @@
     align-items: center;
 }
 
-.controls-card{
+.controls_card{
     width:290px;
     height:320px;
     border-radius:10px;
 }
 
-.main-control{
+.main_control{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main-control-header{
+.main_control_header{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ac-icon{
+.ac_icon{
     width:100px;
     height:60px;
     margin-right: 30px;
     margin-left: 10px;
 }
 
-.ac-toggle{
+.ac_toggle{
     width:80px;
     height:20px;
 }
 
-.main-control-header-title{
+.main_control_header_title{
     font-size: 15px;
     width: 150px;
 }
@@ -191,7 +193,7 @@
     font-size: 10px;
 }
 
-.minus-button, .plus-button{
+.minus_button, .plus_button{
     border-radius: 50px;
     width: 50px;
     height: 50px;
@@ -204,37 +206,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('common/images/range.png');
+    background-image: url("common/images/range.png");
     background-size: cover;
     background-position: center;
 }
 
-.curve-bg{
+.curve_bg{
     width: 90px;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('common/images/curve_bg.png');
+    background-image: url("common/images/curve_bg.png");
     background-size: cover;
     background-position: center;
 }
 
-.curve-bg .progress{
+.curve_bg .progress{
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
 }
 
-.curve-bg .progress-bar{
+.curve_bg .progress_bar{
     margin:5px;
     stroke-width: 12px;
     background-color: transparent;
     transform: rotate(-120deg);
 }
 
-.curve-bg .progress-value{
+.curve_bg .progress_value{
     width: 90px;
     height: 95px;
     position: absolute;
@@ -242,16 +244,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('common/images/value_bg.png');
+    background-image: url("common/images/value_bg.png");
     background-size: cover;
     background-position: center;
 }
 
-.progress-value-header{
+.progress_value_header{
     font-size: 12px;
 }
 
-.progress-value-footer {
+.progress_value_footer {
     font-size: 7px;
 }
 
@@ -264,14 +266,14 @@
     width: 30px; height: 30px;
 }
 
-.dry-mode, .cool-mode, .fan-mode, .turbo-mode{
+.dry_mode, .cool_mode, .fan_mode, .turbo_mode{
     margin: 10px;
     width: 50px;
     height: 50px;
     border-radius: 10px;
 }
 
-.other-controls{
+.other_controls{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +281,7 @@
     margin-right: 10px;
 }
 
-.lamp-control, .fan-control{
+.lamp_control, .fan_control{
     border-radius: 10px;
     width: 260px;
     height: 60px;
@@ -289,13 +291,13 @@
     margin: 10px 0;
 }
 
-.other-controls-icon2{
+.other_controls_icon2{
     width: 30px;
     height: 30px;
 }
 
 
-.other-controls-icon1{
+.other_controls_icon1{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,7 +307,7 @@
     height: 100%;
 }
 
-.other-controls-slider{
+.other_controls_slider{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -314,7 +316,7 @@
     margin: 0 20px;
 }
 
-.other-controls-progress-bar{
+.other_controls_progress_bar{
     background-color: #ffffff;
     width: 150px;
     stroke-width: 10px;
@@ -328,12 +330,12 @@
     align-items: center;
 }
 
-.devices-title{
+.devices_title{
     font-size: 20px;
     width: 70%;
 }
 
-.add-device{
+.add_device{
     color: #ffffff;
     border-radius: 8px;
     width: 130px;
@@ -344,20 +346,20 @@
     font-size: 12px;
 }
 
-.add-device-icon{
+.add_device_icon{
     width: 30px;
     height: 30px;
     margin: 0 5px;
 }
 
-.device-list{
+.device_list{
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.device-card{
+.device_card{
     width: 130px;
     height: 100px;
     border-radius: 10px;
@@ -371,7 +373,7 @@
     flex-direction: column;
 }
 
-.device-header{
+.device_header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,14 +381,14 @@
     width: 100%;
 }
 
-.device-icon{
+.device_icon{
     width: 40px;
     height: 40px;
     position: absolute;
     left: 0px;
 }
 
-.device-toggle{
+.device_toggle{
     margin: 5px 0 0 0 ;
     width: 36px;
     height: 20px;
@@ -394,7 +396,7 @@
     right: 0px;
 }
 
-.device-footer{
+.device_footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -403,7 +405,7 @@
     height: 30%;
 }
 
-.device-name{
+.device_name{
     position: absolute;
     left: 0px;
     width: 90%;
@@ -411,13 +413,15 @@
     overflow: hidden;
 }
 
-.on-off{
+.on_off{
     position: absolute;
     right: 0px;
 }
 
 
 .sidebar{
+    overflow: scroll;
+    scrollbar-width: 0px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -442,16 +446,16 @@
     justify-content: center;
 }
 
-.weather-title, .weather-value, .temperature-visualizer, .humidity-visualizer{
+.weather_title, .weather_value, .temperature_visualizer, .humidity_visualizer{
     margin:2px;
 }
 
-.weather-info{
+.weather_info{
     display: flex;
     flex-direction: column;
 }
 
-.temperature-visualizer{
+.temperature_visualizer{
     background-image: url('common/images/temperature_range.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -460,7 +464,7 @@
     height: 30px;
 }
 
-.humidity-visualizer{
+.humidity_visualizer{
     background-image: url('common/images/bar_graph.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -469,7 +473,7 @@
     height: 30px;
 }
 
-.carousel-card{
+.carousel_card{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -485,64 +489,68 @@
     flex-direction: column;
 }
 
-.carousel-header{
+.carousel_header{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel-icon{
+.carousel_icon{
     width: 50px;
     height: 50px;
 }
 
-.carousel-title{
+.carousel_title{
     margin-left: 10px;
     width: 80%;
     overflow: hidden ;
     font-size: 10px;
 }
 
-.carousel-toggle{
+.carousel_toggle{
     width: 40px;
     height: 15px;
     margin: 0px;
 }
 
-.carousel-content{
+.carousel_content{
     width: 100%;
     height: 120px;
     margin:10px;
 }
 
-.carousel-swiper{
+.carousel_swiper{
+    indicator-color: #ffffff;
+    indicator-selected-color: #0098FD;
+    indicator-size: 5px;
+    indicator-bottom: 10px;
 }
 
-.carousel-swiper image{
+.carousel_swiper image{
     border-radius: 10px;
 }
 
-.carousel-content-header{
+.carousel_content_header{
     position: absolute;
     width: 100%;
     margin:10px;
 }
 
-.carousel-content-icon{
+.carousel_content_icon{
     width: 40px;
     height: 15px;
     position: absolute;
     left: 0px;
 }
 
-.carousel-content-time{
+.carousel_content_time{
     font-size: 10px;
     color: #ffffff;
     position: absolute;
     right: 0;
 }
 
-.weather-warning-card{
+.weather_warning_card{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -552,41 +560,41 @@
     border-radius: 10px;
 }
 
-.weather-warning{
+.weather_warning{
     display: flex;
     flex-direction: column;
 }
 
-.weather-warning-header{
+.weather_warning_header{
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.weather-warning-icon{
+.weather_warning_icon{
     width: 60px;
     height: 60px;
 }
 
-.weather-warning-title{
+.weather_warning_title{
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 10px;
 }
 
-.weather-warning-location{
+.weather_warning_location{
     display: flex;
     align-items: center;
 }
 
-.weather-warning-location-icon{
+.weather_warning_location_icon{
     width: 8px;
     height: 11px;
     margin-right: 5px;
 }
 
-.weather-warning-buttons{
+.weather_warning_buttons{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -594,7 +602,7 @@
     margin: 10px 0;
 }
 
-.weather-warning-day{
+.weather_warning_day{
     width: 60px;
     height: 38px;
     display: flex;
@@ -605,7 +613,7 @@
     margin: 0 10px 0 0 ;
 }
 
-.weather-warning-week{
+.weather_warning_week{
     width: 65px;
     height: 38px;
     display: flex;
@@ -616,7 +624,7 @@
     margin: 0;
 }
 
-.weather-warning-weather{
+.weather_warning_weather{
     width: 150px;
     height: 80px;
     display: flex;
@@ -624,7 +632,7 @@
     align-items: center;
 }
 
-.weather-warning-info{
+.weather_warning_info{
     width: 50%;
     margin-left: 20px;
     display: flex;
@@ -632,27 +640,27 @@
     justify-content: center;
 }
 
-.weather-warning-date{
+.weather_warning_date{
     font-size: 8px;
 }
 
-.weather-warning-temperature{
+.weather_warning_temperature{
     font-size: 20px;
     margin: 2px 0;
 }
 
-.weather-warning-weather-type{
+.weather_warning_weather_type{
     font-size: 10px;
 }
 
-.weather-warning-clouds{
+.weather_warning_clouds{
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.weather-warning-footer{
+.weather_warning_footer{
     margin-top:10px;
     font-size: 10px;
     display: flex;
@@ -671,7 +679,7 @@
 }
 
 @media (device-type: phone){
-    .main-control-header-title{
+    .main_control_header_title{
         width: 100px;
     }
     .minus, .plus{
@@ -681,7 +689,7 @@
     .sidebar{
         display: none;
     }
-    .other-controls{
+    .other_controls{
         margin: 0;
     }
 }

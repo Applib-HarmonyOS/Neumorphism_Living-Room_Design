@@ -19,79 +19,79 @@
     <neutheme class="container" theme="light_theme">
         <div class="main">
             <div class="user">
-                <neuavatar icon="common/images/user.png" class="user-avatar"></neuavatar>
-                <div class="user-info">
-                    <div class="user-name semi-bold dark-text">
+                <neuavatar icon="common/images/user.png" class="user_avatar"></neuavatar>
+                <div class="user_info">
+                    <div class="user_name semi_bold dark_text">
                         <text>{{$t("strings.Good_Morning")}} {{username}}</text>
                     </div>
-                    <div class="user-message regular light-text">
+                    <div class="user_message regular light_text">
                         <text>{{$t("strings.Have_a_nice_day")}}</text>
                     </div>
                 </div>
             </div>
             <div class="rooms">
-                <div class="room semi-bold dark-text" onclick="toggleRoom(0)">
+                <div class="room semi_bold dark_text" onclick="toggleRoom(0)">
                     <text>{{$t("strings.Living_Room")}}</text>
-                    <div class="active-room-indicator">
+                    <div class="active_room_indicator">
                         <image if="{{living_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
-                <div class="room regular light-text" onclick="toggleRoom(1)">
+                <div class="room regular light_text" onclick="toggleRoom(1)">
                     <text>{{$t("strings.Dining_Room")}}</text>
-                    <div class="active-room-indicator">
+                    <div class="active_room_indicator">
                         <image if="{{dining_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
-                <div class="room regular light-text" onclick="toggleRoom(2)">
+                <div class="room regular light_text" onclick="toggleRoom(2)">
                     <text>{{$t("strings.Bed_Room")}}</text>
-                    <div class="active-room-indicator">
+                    <div class="active_room_indicator">
                         <image if="{{bed_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
-                <div class="room regular light-text" onclick="toggleRoom(3)">
+                <div class="room regular light_text" onclick="toggleRoom(3)">
                     <text>{{$t("strings.Bath_Room")}}</text>
-                    <div class="active-room-indicator">
+                    <div class="active_room_indicator">
                         <image if="{{bath_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
-                <div class="room regular light-text" onclick="toggleRoom(4)">
+                <div class="room regular light_text" onclick="toggleRoom(4)">
                     <text>{{$t("strings.Backyard")}}</text>
-                    <div class="active-room-indicator">
+                    <div class="active_room_indicator">
                         <image if="{{backyard_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
             </div>
             <div class="controls">
-                <neucard class="controls-card" >
-                    <div class="main-control">
-                            <div class="main-control-header">
-                                <div class="ac-icon">
-                                    <image src="common/images/ac.png"></image>
-                                </div>
-                                <div class="main-control-header-title semi-bold dark-text">
-                                    <text>{{$t("strings.Living_Room")}}</text>
-                                </div>
-                                <neuswitcher class="ac-toggle" border="50px" color="#0099FF" toggle="living_room" @toggle-event="toggleLivingRoom"></neuswitcher>
+                <neucard class="controls_card" >
+                    <div class="main_control">
+                        <div class="main_control_header">
+                            <div class="ac_icon">
+                                <image src="common/images/ac.png"></image>
                             </div>
+                            <div class="main_control_header_title semi_bold dark_text">
+                                <text>{{$t("strings.Living_Room")}}</text>
+                            </div>
+                            <neuswitcher class="ac_toggle" border="50px" color="#0099FF" toggle="living_room" @toggle-event="toggleLivingRoom"></neuswitcher>
+                        </div>
 
                         <div class="controller">
-                            <div class="minus semi-bold light-text">
+                            <div class="minus semi_bold light_text">
                                 <text>.05&deg;C</text>
-                                <neubutton class="minus-button theme-bg" @button-event="decreaseTemp">
-                                        <text>-</text>
+                                <neubutton class="minus_button theme_bg" @button-event="decreaseTemp">
+                                    <text>-</text>
                                 </neubutton>
                             </div>
-                            <div class="level semi-bold light-text">
+                            <div class="level semi_bold light_text">
                                 <text>10&deg;C</text>
                                 <div class="range">
-                                    <div class="curve-bg">
+                                    <div class="curve_bg">
                                         <div class="progress">
-                                            <progress class="progress-bar theme-text" type="ring" percent="{{(temperature-15)*6}}"></progress>
-                                            <div class="progress-value">
-                                                <div class="progress-value-header semi-bold dark-text">
+                                            <progress class="progress_bar theme_text" type="ring" percent="{{(temperature-15)*6}}"></progress>
+                                            <div class="progress_value">
+                                                <div class="progress_value_header semi_bold dark_text">
                                                     <text>{{temperature}}&deg;C</text>
                                                 </div>
-                                                <div class="progress-value-footer regular light-text">
+                                                <div class="progress_value_footer regular light_text">
                                                     <text>{{$t("strings.Celsius")}}</text>
                                                 </div>
                                             </div>
@@ -99,161 +99,161 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="plus semi-bold light-text">
+                            <div class="plus semi_bold light_text">
                                 <text>.25&deg;C</text>
-                                <neubutton class="plus-button theme-bg" @button-event="increaseTemp">
-                                        <text>+</text>
+                                <neubutton class="plus_button theme_bg" @button-event="increaseTemp">
+                                    <text>+</text>
                                 </neubutton>
                             </div>
                         </div>
                         <div class="modes">
-                            <neubutton class="dry-mode" @button-event="toggleDryMode">
+                            <neubutton class="dry_mode" @button-event="toggleDryMode">
                                 <image src="common/images/dry_mode.png"></image>
                             </neubutton>
-                            <neubutton class="theme-bg cool-mode" @button-event="toggleCoolMode">
+                            <neubutton class="theme_bg cool_mode" @button-event="toggleCoolMode">
                                 <image src="common/images/cool_mode.png"></image>
                             </neubutton>
-                            <neubutton class="fan-mode" @button-event="toggleFanMode">
+                            <neubutton class="fan_mode" @button-event="toggleFanMode">
                                 <image src="common/images/fan_mode.png"></image>
                             </neubutton>
-                            <neubutton class="turbo-mode" @button-event="toggleTurboMode">
+                            <neubutton class="turbo_mode" @button-event="toggleTurboMode">
                                 <image src="common/images/turbo_mode.png"></image>
                             </neubutton>
                         </div>
                     </div>
                 </neucard>
-                <div class="other-controls">
-                    <neucard class="lamp-control" >
-                        <div class="other-controls-icon1 medium light-text">
+                <div class="other_controls">
+                    <neucard class="lamp_control" >
+                        <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/lamp.png"></image>
                             <text>{{$t("strings.Lamp")}} 1</text>
                         </div>
-                        <div class="other-controls-slider">
-                            <progress class="other-controls-progress-bar theme-text" type="horizontal" percent= "{{lamp1_p}}"></progress>
+                        <div class="other_controls_slider">
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp1_p}}"></progress>
                         </div>
-                        <div class="other-controls-icon2">
+                        <div class="other_controls_icon2">
                             <image src="common/images/brightness.png"></image>
                         </div>
                     </neucard>
-                    <neucard class="lamp-control">
-                        <div class="other-controls-icon1 medium light-text">
+                    <neucard class="lamp_control">
+                        <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/lamp.png"></image>
                             <text>{{$t("strings.Lamp")}} 2</text>
                         </div>
-                        <div class="other-controls-slider">
-                            <progress class="other-controls-progress-bar theme-text" type="horizontal" percent= "{{lamp2_p}}"></progress>
+                        <div class="other_controls_slider">
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp2_p}}"></progress>
                         </div>
-                        <div class="other-controls-icon2">
+                        <div class="other_controls_icon2">
                             <image src="common/images/brightness.png"></image>
                         </div>
                     </neucard>
-                    <neucard class="fan-control">
-                        <div class="other-controls-icon1 medium light-text">
+                    <neucard class="fan_control">
+                        <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/fan.png"></image>
                             <text>{{$t("strings.Fan")}} 1</text>
                         </div>
-                        <div class="other-controls-slider">
-                            <progress class="other-controls-progress-bar theme-text" type="horizontal" percent= "{{fan1_p}}"></progress>
+                        <div class="other_controls_slider">
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan1_p}}"></progress>
                         </div>
-                        <div class="other-controls-icon2">
+                        <div class="other_controls_icon2">
                             <image src="common/images/fan_speed.png"></image>
                         </div>
                     </neucard>
-                    <neucard class="fan-control">
-                        <div class="other-controls-icon1 medium light-text">
+                    <neucard class="fan_control">
+                        <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/fan.png"></image>
                             <text>{{$t("strings.Fan")}} 2</text>
                         </div>
-                        <div class="other-controls-slider">
-                            <progress class="other-controls-progress-bar theme-text" type="horizontal" percent= "{{fan2_p}}"></progress>
+                        <div class="other_controls_slider">
+                            <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan2_p}}"></progress>
                         </div>
-                        <div class="other-controls-icon2">
+                        <div class="other_controls_icon2">
                             <image src="common/images/fan_speed.png"></image>
                         </div>
                     </neucard>
                 </div>
                 <div class="devices">
-                    <div class="devices-title semi-bold dark-text">
+                    <div class="devices_title semi_bold dark_text">
                         <text>{{$t("strings.Devices")}}</text>
                     </div>
-                    <neubutton class="add-device theme-bg" @button-event="onNewDevicesClick">
-                        <div class="add-device-icon">
+                    <neubutton class="add_device theme_bg" @button-event="onNewDevicesClick">
+                        <div class="add_device_icon">
                             <image src="common/images/add_new.png"/>
                         </div>
                         <text>{{$t("strings.New_Devices")}}</text>
                     </neubutton>
                 </div>
-                <div class="device-list">
-                    <neucard class="device-card">
+                <div class="device_list">
+                    <neucard class="device_card">
                         <div class="device">
-                            <div class="device-header">
-                                <div class="device-icon">
+                            <div class="device_header">
+                                <div class="device_icon">
                                     <image src="common/images/smart_tv.png"></image>
                                 </div>
-                                <neuswitcher class="device-toggle" color="#0099FF" border="50px" toggle="{{smart_tv}}" @toggle-event="toggleSmartTV"></neuswitcher>
+                                <neuswitcher class="device_toggle" color="#0099FF" border="50px" toggle="{{smart_tv}}" @toggle-event="toggleSmartTV"></neuswitcher>
                             </div>
-                            <div class="device-footer">
-                                <div class="device-name semi-bold light-text">
+                            <div class="device_footer">
+                                <div class="device_name semi_bold light_text">
                                     <text>{{$t("strings.SmartTV")}} 1</text>
                                 </div>
-                                <div class="on-off semi-bold theme-text">
+                                <div class="on_off semi_bold theme_text">
                                     <text if="{{smart_tv}}">{{$t("strings.OFF")}}</text>
                                     <text else>{{$t("strings.ON")}}</text>
                                 </div>
                             </div>
                         </div>
                     </neucard>
-                    <neucard class="device-card theme-bg">
+                    <neucard class="device_card theme_bg">
                         <div class="device">
-                            <div class="device-header">
-                                <div class="device-icon">
+                            <div class="device_header">
+                                <div class="device_icon">
                                     <image src="common/images/ac_selected.png"></image>
                                 </div>
-                                <neuswitcher class="device-toggle"  border="50px" toggle="{{ac}}" @toggle-event="toggleAC"></neuswitcher>
+                                <neuswitcher class="device_toggle"  border="50px" toggle="{{ac}}" @toggle-event="toggleAC"></neuswitcher>
                             </div>
-                            <div class="device-footer">
-                                <div class="device-name semi-bold">
+                            <div class="device_footer">
+                                <div class="device_name semi_bold">
                                     <text>{{$t("strings.AC")}}</text>
                                 </div>
-                                <div class="on-off semi-bold">
+                                <div class="on_off semi_bold">
                                     <text if="{{ac}}">{{$t("strings.ON")}}</text>
                                     <text else>{{$t("strings.OFF")}}</text>
                                 </div>
                             </div>
                         </div>
                     </neucard>
-                    <neucard class="device-card">
+                    <neucard class="device_card">
                         <div class="device">
-                            <div class="device-header">
-                                <div class="device-icon">
+                            <div class="device_header">
+                                <div class="device_icon">
                                     <image src="common/images/washing_machine.png"></image>
                                 </div>
-                                <neuswitcher class="device-toggle" color="#0099FF" border="50px" toggle="{{washing_machine}}" @toggle-event="toggleWashingMachine"></neuswitcher>
+                                <neuswitcher class="device_toggle" color="#0099FF" border="50px" toggle="{{washing_machine}}" @toggle-event="toggleWashingMachine"></neuswitcher>
                             </div>
-                            <div class="device-footer">
-                                <div class="device-name semi-bold light-text">
+                            <div class="device_footer">
+                                <div class="device_name semi_bold light_text">
                                     <text>{{$t("strings.Washing_Machine")}}</text>
                                 </div>
-                                <div class="on-off semi-bold theme-text">
+                                <div class="on_off semi_bold theme_text">
                                     <text if="{{washing_machine}}">{{$t("strings.OFF")}}</text>
                                     <text else>{{$t("strings.ON")}}</text>
                                 </div>
                             </div>
                         </div>
                     </neucard>
-                    <neucard class="device-card">
+                    <neucard class="device_card">
                         <div class="device">
-                            <div class="device-header">
-                                <div class="device-icon">
+                            <div class="device_header">
+                                <div class="device_icon">
                                     <image src="common/images/fridge.png"></image>
                                 </div>
-                                <neuswitcher class="device-toggle" color="#0099FF" border="50px" toggle="{{refrigerator}}" @toggle-event="toggleRefrigerator"></neuswitcher>
+                                <neuswitcher class="device_toggle" color="#0099FF" border="50px" toggle="{{refrigerator}}" @toggle-event="toggleRefrigerator"></neuswitcher>
                             </div>
-                            <div class="device-footer">
-                                <div class="device-name semi-bold light-text">
+                            <div class="device_footer">
+                                <div class="device_name semi_bold light_text">
                                     <text>{{$t("strings.Refrigerator")}}</text>
                                 </div>
-                                <div class="on-off semi-bold theme-text">
+                                <div class="on_off semi_bold theme_text">
                                     <text if="{{refrigerator}}">{{$t("strings.OFF")}}</text>
                                     <text else>{{$t("strings.ON")}}</text>
                                 </div>
@@ -266,44 +266,44 @@
         <div class="sidebar">
             <div class="weather">
                 <neucard class="temperature">
-                    <div class="weather-info">
-                        <div class="weather-title medium light-text">
+                    <div class="weather_info">
+                        <div class="weather_title medium light_text">
                             <text>{{$t("strings.Temperature")}}</text>
                         </div>
-                        <div class="weather-value semi-bold light-text">
+                        <div class="weather_value semi_bold light_text">
                             <text>+{{temperature}}&deg;C</text>
                         </div>
-                        <div class="temperature-visualizer">
+                        <div class="temperature_visualizer">
                         </div>
                     </div>
                 </neucard>
                 <neucard class="humidity">
-                    <div class="weather-info">
-                        <div class="weather-title medium light-text">
+                    <div class="weather_info">
+                        <div class="weather_title medium light_text">
                             <text>{{$t("strings.Humidity")}}</text>
                         </div>
-                        <div class="weather-value semi-bold light-text">
+                        <div class="weather_value semi_bold light_text">
                             <text>{{humidity}}%</text>
                         </div>
-                        <div class="humidity-visualizer">
+                        <div class="humidity_visualizer">
                             <image src="common/images/graph_line.png"></image>
                         </div>
                     </div>
                 </neucard>
             </div>
-            <neucard class="carousel-card">
+            <neucard class="carousel_card">
                 <div class="carousel">
-                    <div class="carousel-header">
-                        <div class="carousel-icon">
+                    <div class="carousel_header">
+                        <div class="carousel_icon">
                             <image src="common/images/camera.png"></image>
                         </div>
-                        <div class="carousel-title semi-bold dark-text">
+                        <div class="carousel_title semi_bold dark_text">
                             <text>{{$t("strings.Backyard_Camera")}}</text>
                         </div>
-                        <neuswitcher class="carousel-toggle" border="10px" color="#0099FF" toggle="{{carousel}}" @toggle-event="toggleCarousel"></neuswitcher>
+                        <neuswitcher class="carousel_toggle" border="10px" color="#0099FF" toggle="{{carousel}}" @toggle-event="toggleCarousel"></neuswitcher>
                     </div>
-                    <div class="carousel-content">
-                        <swiper class="carousel-swiper" id="swiper" index="0" indicator="true" loop="true" digital="false" cachedsize="-1" scrolleffect="spring">
+                    <div class="carousel_content">
+                        <swiper class="carousel_swiper" id="swiper" index="0" indicator="true" loop="true" digital="false" cachedsize="-1" scrolleffect="spring">
                             <div class = "swiperContent1" >
                                 <image src="common/images/backyard.jpg"></image>
                             </div>
@@ -317,67 +317,67 @@
                                 <image src="common/images/living_room_3.jpg"></image>
                             </div>
                         </swiper>
-                        <div class="carousel-content-header">
-                            <div class="carousel-content-icon">
+                        <div class="carousel_content_header">
+                            <div class="carousel_content_icon">
                                 <image src="common/images/live.png"></image>
                             </div>
-                            <div class="carousel-content-time">
+                            <div class="carousel_content_time">
                                 <text>20/12 00:01:09</text>
                             </div>
                         </div>
                     </div>
                 </div>
             </neucard>
-            <neucard class="weather-warning-card">
-                <div class="weather-warning">
-                    <div class="weather-warning-header">
-                        <div class="weather-warning-icon">
+            <neucard class="weather_warning_card">
+                <div class="weather_warning">
+                    <div class="weather_warning_header">
+                        <div class="weather_warning_icon">
                             <image src="common/images/weather_warning.png"></image>
                         </div>
-                        <div class="weather-warning-title">
-                            <div class="warning semi-bold dark-text">
+                        <div class="weather_warning_title">
+                            <div class="warning semi_bold dark_text">
                                 <text>{{$t("strings.Weather_Warning")}}</text>
                             </div>
-                            <div class="weather-warning-location regular light-text">
-                                <div class="weather-warning-location-icon">
+                            <div class="weather_warning_location regular light_text">
+                                <div class="weather_warning_location_icon">
                                     <image src="common/images/location_icon.png"></image>
                                 </div>
                                 <text>{{location}}</text>
                             </div>
                         </div>
                     </div>
-                    <div class="weather-warning-buttons">
-                        <neubutton class="weather-warning-day theme-bg" @button-event="onDateClick">
+                    <div class="weather_warning_buttons">
+                        <neubutton class="weather_warning_day theme_bg" @button-event="onDateClick">
                             <text>{{$t("strings.Day")}}</text>
                         </neubutton>
-                        <neubutton class="weather-warning-week lighter-text" @button-event="onWeekClick">
+                        <neubutton class="weather_warning_week lighter_text" @button-event="onWeekClick">
                             <text>{{$t("strings.Week")}}</text>
                         </neubutton>
                     </div>
-                    <div class="weather-warning-weather">
-                        <div class="weather-warning-info">
-                            <div class="weather-warning-date bold light-text">
+                    <div class="weather_warning_weather">
+                        <div class="weather_warning_info">
+                            <div class="weather_warning_date bold light_text">
                                 <text>{{day}}</text>
                             </div>
-                            <div class="weather-warning-temperature bold light-text">
+                            <div class="weather_warning_temperature bold light_text">
                                 <text>{{temperatureInCelsius}}&deg;C</text>
                             </div>
-                            <div class="weather-warning-weather-type medium lighter-text">
+                            <div class="weather_warning_weather_type medium lighter_text">
                                 <text>{{weather}}</text>
                             </div>
                         </div>
-                        <div class="weather-warning-clouds">
+                        <div class="weather_warning_clouds">
                             <image src="common/images/rain.png"></image>
                         </div>
                     </div>
-                    <div class="weather-warning-footer medium light-text">
+                    <div class="weather_warning_footer medium light_text">
                         <text>{{alert_title}}</text>
                         <text>{{alert_desc}}</text>
                     </div>
                 </div>
             </neucard>
         </div>
-        <div class="error bold dark-text">
+        <div class="error bold dark_text">
             <text>{{$t("strings.This_device_isnt_supported.")}}</text>
         </div>
     </neutheme>
