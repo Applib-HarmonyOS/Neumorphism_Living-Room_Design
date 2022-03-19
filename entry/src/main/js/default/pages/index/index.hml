@@ -22,40 +22,40 @@
                 <neuavatar icon="common/images/user.png" class="user_avatar"></neuavatar>
                 <div class="user_info">
                     <div class="user_name semi_bold dark_text">
-                        <text>Good Morning, {{username}}</text>
+                        <text>{{$t("strings.Good_Morning")}} {{username}}</text>
                     </div>
                     <div class="user_message regular light_text">
-                        <text>Have a nice day</text>
+                        <text>{{$t("strings.Have_a_nice_day")}}</text>
                     </div>
                 </div>
             </div>
             <div class="rooms">
                 <div class="room semi_bold dark_text" onclick="toggleRoom(0)">
-                    <text>Living Room</text>
+                    <text>{{$t("strings.Living_Room")}}</text>
                     <div class="active_room_indicator">
                         <image if="{{living_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
                 <div class="room regular light_text" onclick="toggleRoom(1)">
-                    <text>Dining Room</text>
+                    <text>{{$t("strings.Dining_Room")}}</text>
                     <div class="active_room_indicator">
                         <image if="{{dining_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
                 <div class="room regular light_text" onclick="toggleRoom(2)">
-                    <text>Bed Room</text>
+                    <text>{{$t("strings.Bed_Room")}}</text>
                     <div class="active_room_indicator">
                         <image if="{{bed_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
                 <div class="room regular light_text" onclick="toggleRoom(3)">
-                    <text>Bath Room</text>
+                    <text>{{$t("strings.Bath_Room")}}</text>
                     <div class="active_room_indicator">
                         <image if="{{bath_room_active}}" src="common/images/slider.png"></image>
                     </div>
                 </div>
                 <div class="room regular light_text" onclick="toggleRoom(4)">
-                    <text>Backyard</text>
+                    <text>{{$t("strings.Backyard")}}</text>
                     <div class="active_room_indicator">
                         <image if="{{backyard_room_active}}" src="common/images/slider.png"></image>
                     </div>
@@ -69,7 +69,7 @@
                                     <image src="common/images/ac.png"></image>
                                 </div>
                                 <div class="main_control_header_title semi_bold dark_text">
-                                    <text>Living Room</text>
+                                    <text>{{$t("strings.Living_Room")}}</text>
                                 </div>
                                 <neuswitcher class="ac_toggle" border="50px" color="#0099FF" toggle="living_room" @toggle-event="toggleLivingRoom"></neuswitcher>
                             </div>
@@ -92,7 +92,7 @@
                                                     <text>{{temperature}}&deg;C</text>
                                                 </div>
                                                 <div class="progress_value_footer regular light_text">
-                                                    <text>Celcius</text>
+                                                    <text>{{$t("strings.Celsius")}}</text>
                                                 </div>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@
                     <neucard class="lamp_control" >
                         <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/lamp.png"></image>
-                            <text>Lamp 1</text>
+                            <text>{{$t("strings.Lamp")}} 1</text>
                         </div>
                         <div class="other_controls_slider">
                             <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp1_p}}"></progress>
@@ -138,7 +138,7 @@
                     <neucard class="lamp_control">
                         <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/lamp.png"></image>
-                            <text>Lamp 2</text>
+                            <text>{{$t("strings.Lamp")}} 2</text>
                         </div>
                         <div class="other_controls_slider">
                             <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{lamp2_p}}"></progress>
@@ -150,7 +150,7 @@
                     <neucard class="fan_control">
                         <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/fan.png"></image>
-                            <text>Fan 1</text>
+                            <text>{{$t("strings.Fan")}} 1</text>
                         </div>
                         <div class="other_controls_slider">
                             <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan1_p}}"></progress>
@@ -162,7 +162,7 @@
                     <neucard class="fan_control">
                         <div class="other_controls_icon1 medium light_text">
                             <image src="common/images/fan.png"></image>
-                            <text>Fan 2</text>
+                            <text>{{$t("strings.Fan")}} 2</text>
                         </div>
                         <div class="other_controls_slider">
                             <progress class="other_controls_progress_bar theme_text" type="horizontal" percent= "{{fan2_p}}"></progress>
@@ -174,13 +174,13 @@
                 </div>
                 <div class="devices">
                     <div class="devices_title semi_bold dark_text">
-                        <text>Devices</text>
+                        <text>{{$t("strings.Devices")}}</text>
                     </div>
                     <neubutton class="add_device theme_bg" @button-event="onNewDevicesClick">
                         <div class="add_device_icon">
                             <image src="common/images/add_new.png"/>
                         </div>
-                        <text>New Devices</text>
+                        <text>{{$t("strings.New_Devices")}}</text>
                     </neubutton>
                 </div>
                 <div class="device_list">
@@ -194,11 +194,11 @@
                             </div>
                             <div class="device_footer">
                                 <div class="device_name semi_bold light_text">
-                                    <text>SmartTV 1</text>
+                                    <text>{{$t("strings.SmartTV")}} 1</text>
                                 </div>
                                 <div class="on_off semi_bold theme_text">
-                                    <text if="{{smart_tv1}}">OFF</text>
-                                    <text else>ON</text>
+                                    <text if="{{smart_tv}}">{{$t("strings.OFF")}}</text>
+                                    <text else>{{$t("strings.ON")}}</text>
                                 </div>
                             </div>
                         </div>
@@ -213,11 +213,11 @@
                             </div>
                             <div class="device_footer">
                                 <div class="device_name semi_bold">
-                                    <text>AC</text>
+                                    <text>{{$t("strings.AC")}}</text>
                                 </div>
                                 <div class="on_off semi_bold">
-                                    <text if="{{ac}}">ON</text>
-                                    <text else>OFF</text>
+                                    <text if="{{ac}}">{{$t("strings.ON")}}</text>
+                                    <text else>{{$t("strings.OFF")}}</text>
                                 </div>
                             </div>
                         </div>
@@ -232,11 +232,11 @@
                             </div>
                             <div class="device_footer">
                                 <div class="device_name semi_bold light_text">
-                                    <text>Washing Machine</text>
+                                    <text>{{$t("strings.Washing_Machine")}}</text>
                                 </div>
                                 <div class="on_off semi_bold theme_text">
-                                    <text if="{{washing_machine}}">OFF</text>
-                                    <text else>ON</text>
+                                    <text if="{{washing_machine}}">{{$t("strings.OFF")}}</text>
+                                    <text else>{{$t("strings.ON")}}</text>
                                 </div>
                             </div>
                         </div>
@@ -251,11 +251,11 @@
                             </div>
                             <div class="device_footer">
                                 <div class="device_name semi_bold light_text">
-                                    <text>Refrigerator</text>
+                                    <text>{{$t("strings.Refrigerator")}}</text>
                                 </div>
                                 <div class="on_off semi_bold theme_text">
-                                    <text if="{{refrigerator}}">OFF</text>
-                                    <text else>ON</text>
+                                    <text if="{{refrigerator}}">{{$t("strings.OFF")}}</text>
+                                    <text else>{{$t("strings.ON")}}</text>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                 <neucard class="temperature">
                     <div class="weather_info">
                         <div class="weather_title medium light_text">
-                            <text>Temperature</text>
+                            <text>{{$t("strings.Temperature")}}</text>
                         </div>
                         <div class="weather_value semi_bold light_text">
                             <text>+{{temperature}}&deg;C</text>
@@ -280,7 +280,7 @@
                 <neucard class="humidity">
                     <div class="weather_info">
                         <div class="weather_title medium light_text">
-                            <text>Humidity</text>
+                            <text>{{$t("strings.Humidity")}}</text>
                         </div>
                         <div class="weather_value semi_bold light_text">
                             <text>{{humidity}}%</text>
@@ -298,7 +298,7 @@
                             <image src="common/images/camera.png"></image>
                         </div>
                         <div class="carousel_title semi_bold dark_text">
-                            <text>Backyard Camera</text>
+                            <text>{{$t("strings.Backyard_Camera")}}</text>
                         </div>
                         <neuswitcher class="carousel_toggle" border="10px" color="#0099FF" toggle="{{carousel}}" @toggle-event="toggleCarousel"></neuswitcher>
                     </div>
@@ -336,7 +336,7 @@
                         </div>
                         <div class="weather_warning_title">
                             <div class="warning semi_bold dark_text">
-                                <text>Weather Warning</text>
+                                <text>{{$t("strings.Weather_Warning")}}</text>
                             </div>
                             <div class="weather_warning_location regular light_text">
                                 <div class="weather_warning_location_icon">
@@ -348,10 +348,10 @@
                     </div>
                     <div class="weather_warning_buttons">
                         <neubutton class="weather_warning_day theme_bg" @button-event="onDateClick">
-                            <text>Day</text>
+                            <text>{{$t("strings.Day")}}</text>
                         </neubutton>
                         <neubutton class="weather_warning_week lighter_text" @button-event="onWeekClick">
-                            <text>Week</text>
+                            <text>{{$t("strings.Week")}}</text>
                         </neubutton>
                     </div>
                     <div class="weather_warning_weather">
@@ -360,7 +360,7 @@
                                 <text>{{day}}</text>
                             </div>
                             <div class="weather_warning_temperature bold light_text">
-                                <text>{{temperatureInCelcius}}&deg;C</text>
+                                <text>{{temperatureInCelsius}}&deg;C</text>
                             </div>
                             <div class="weather_warning_weather_type medium lighter_text">
                                 <text>{{weather}}</text>
@@ -378,7 +378,7 @@
             </neucard>
         </div>
         <div class="error bold dark_text">
-            <text>This device isn't supported.</text>
+            <text>{{$t("strings.This_device_isnt_supported.")}}</text>
         </div>
     </neutheme>
 </div>

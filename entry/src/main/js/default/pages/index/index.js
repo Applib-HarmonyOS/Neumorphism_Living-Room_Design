@@ -25,7 +25,7 @@ export default {
         temperature: 0,
         humidity: 0,
         location: "Bangalore",
-        temperatureInCelcius:"18",
+        temperatureInCelsius:"18",
         weather: "Rainy",
         day: "Mon, Jan 01",
         alert_title: "Title",
@@ -195,7 +195,7 @@ export default {
                 console.log("fail code:"+ code)
             },
             complete: ()=>{
-                this.temperatureInCelcius = data.currentConditions.temp.c;
+                this.temperatureInCelsius = data.currentConditions.temp.c;
                 this.weather = data.currentConditions.comment;
             }
         })
@@ -204,9 +204,9 @@ export default {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
         ];
         const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-        let month = monthNames[date.getMonth()]
-        let week = weekDays[date.getDay()]
-        this.day=week+", "+month+(String(date.getDate()))
+        let month = this.$t('strings.'+monthNames[date.getMonth()])
+        let week = this.$t('strings.'+weekDays[date.getDay()])
+        this.day=week+", "+month+" "+(String(date.getDate()))
     },
     onInit(){
         this.fetchData();
