@@ -18,39 +18,39 @@
     src: url('/common/poppins/Poppins-Bold.otf');
 }
 
-.bold{
-    font-family: 'poppins-bold', sans-serif;
+.bold {
+    font-family: poppins-bold;
 }
 
-.semi-bold{
-    font-family: 'poppins-semibold', sans-serif;
+.semi-bold {
+    font-family: poppins-semibold;
 }
 
-.medium{
-    font-family: 'poppins-medium', sans-serif;
+.medium {
+    font-family: poppins-medium;
 }
 
-.regular{
-    font-family: 'poppins-regular', sans-serif;
+.regular {
+    font-family: poppins-regular;
 }
 
-.dark-text{
+.dark-text {
     color: #22304A;
 }
 
-.light-text{
+.light-text {
     color: #7888A2;
 }
 
-.lighter-text{
+.lighter-text {
     color: #AABAD4;
 }
 
-.theme-text{
+.theme-text {
     color: #0099FF;
 }
 
-.theme-bg{
+.theme-bg {
     background-color: #0099FF;
     color: #ffffff;
 }
@@ -65,9 +65,9 @@
     background-color: #FFFFFF;
 }
 
-.container{
+.container {
     padding: 20px;
-    overflow: hidden ;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -77,52 +77,53 @@
     border-radius: 20px;
 }
 
-.main{
+.main {
     width: 600px;
-    display: flex;
     overflow: scroll;
+    scrollbar-width: 0px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.user-avatar{
-    width:80px;
-    height:80px;
-    border-radius:50px;
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
     margin-right: 40px;
 }
 
-.user-info{
+.user-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.user-name{
+.user-name {
     font-size: 20px;
 }
 
-.user-message{
+.user-message {
     font-size: 18px;
 }
 
 
-.rooms{
-    margin: 20px 0 0 0 ;
+.rooms {
+    margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: scroll;
 }
 
-.rooms .room{
+.rooms .room {
     margin-left: 15px;
     font-size: 16px;
     display: flex;
@@ -130,61 +131,61 @@
     align-items: center;
 }
 
-.active-room-indicator{
+.active-room-indicator {
     width: 50px;
     height: 30px;
 }
 
-.controls{
+.controls {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.controls-card{
-    width:290px;
-    height:320px;
-    border-radius:10px;
+.controls-card {
+    width: 290px;
+    height: 320px;
+    border-radius: 10px;
 }
 
-.main-control{
+.main-control {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main-control-header{
+.main-control-header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ac-icon{
-    width:100px;
-    height:60px;
+.ac-icon {
+    width: 100px;
+    height: 60px;
     margin-right: 30px;
     margin-left: 10px;
 }
 
-.ac-toggle{
-    width:80px;
-    height:20px;
+.ac-toggle {
+    width: 80px;
+    height: 20px;
 }
 
-.main-control-header-title{
+.main-control-header-title {
     font-size: 15px;
     width: 150px;
 }
 
-.controller{
+.controller {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.controller .level, .minus, .plus{
+.controller .level, .minus, .plus {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,14 +193,14 @@
     font-size: 10px;
 }
 
-.minus-button, .plus-button{
+.minus-button, .plus-button {
     border-radius: 50px;
     width: 50px;
     height: 50px;
     margin: 10px;
 }
 
-.range{
+.range {
     width: 125px;
     height: 125px;
     display: flex;
@@ -210,7 +211,7 @@
     background-position: center;
 }
 
-.curve-bg{
+.curve-bg {
     width: 90px;
     height: 90px;
     display: flex;
@@ -221,21 +222,21 @@
     background-position: center;
 }
 
-.curve-bg .progress{
+.curve-bg .progress {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
 }
 
-.curve-bg .progress-bar{
-    margin:5px;
+.curve-bg .progress-bar {
+    margin: 5px;
     stroke-width: 12px;
     background-color: transparent;
     transform: rotate(-120deg);
 }
 
-.curve-bg .progress-value{
+.curve-bg .progress-value {
     width: 90px;
     height: 95px;
     position: absolute;
@@ -248,7 +249,7 @@
     background-position: center;
 }
 
-.progress-value-header{
+.progress-value-header {
     font-size: 12px;
 }
 
@@ -257,22 +258,23 @@
 }
 
 
-.modes{
+.modes {
     margin-top: 20px;
 }
 
-.modes image{
-    width: 30px; height: 30px;
+.modes image {
+    width: 30px;
+    height: 30px;
 }
 
-.dry-mode, .cool-mode, .fan-mode, .turbo-mode{
+.dry-mode, .cool-mode, .fan-mode, .turbo-mode {
     margin: 10px;
     width: 50px;
     height: 50px;
     border-radius: 10px;
 }
 
-.other-controls{
+.other-controls {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -280,7 +282,7 @@
     margin-right: 10px;
 }
 
-.lamp-control, .fan-control{
+.lamp-control, .fan-control {
     border-radius: 10px;
     width: 260px;
     height: 60px;
@@ -290,13 +292,13 @@
     margin: 10px 0;
 }
 
-.other-controls-icon2{
+.other-controls-icon2 {
     width: 30px;
     height: 30px;
 }
 
 
-.other-controls-icon1{
+.other-controls-icon1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -306,7 +308,7 @@
     height: 100%;
 }
 
-.other-controls-slider{
+.other-controls-slider {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,26 +317,26 @@
     margin: 0 20px;
 }
 
-.other-controls-progress-bar{
+.other-controls-progress-bar {
     background-color: #ffffff;
     width: 150px;
     stroke-width: 10px;
 }
 
 
-.devices{
+.devices {
     margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.devices-title{
+.devices-title {
     font-size: 20px;
     width: 70%;
 }
 
-.add-device{
+.add-device {
     color: #ffffff;
     border-radius: 8px;
     width: 130px;
@@ -345,34 +347,34 @@
     font-size: 12px;
 }
 
-.add-device-icon{
+.add-device-icon {
     width: 30px;
     height: 30px;
     margin: 0 5px;
 }
 
-.device-list{
+.device-list {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.device-card{
+.device-card {
     width: 130px;
     height: 100px;
     border-radius: 10px;
     margin: 10px;
 }
 
-.device{
+.device {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.device-header{
+.device-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,22 +382,22 @@
     width: 100%;
 }
 
-.device-icon{
+.device-icon {
     width: 40px;
     height: 40px;
     position: absolute;
     left: 0px;
 }
 
-.device-toggle{
-    margin: 5px 0 0 0 ;
+.device-toggle {
+    margin: 5px 0 0 0;
     width: 36px;
     height: 20px;
     position: absolute;
     right: 0px;
 }
 
-.device-footer{
+.device-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,7 +406,7 @@
     height: 30%;
 }
 
-.device-name{
+.device-name {
     position: absolute;
     left: 0px;
     width: 90%;
@@ -412,28 +414,29 @@
     overflow: hidden;
 }
 
-.on-off{
+.on-off {
     position: absolute;
     right: 0px;
 }
 
 
-.sidebar{
+.sidebar {
+    overflow: scroll;
+    scrollbar-width: 0px;
     width: 300px;
     display: flex;
-    overflow: scroll;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.weather{
+.weather {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.temperature, .humidity{
+.temperature, .humidity {
     margin-right: 5px;
     border-radius: 10px;
     font-size: 11px;
@@ -444,16 +447,16 @@
     justify-content: center;
 }
 
-.weather-title, .weather-value, .temperature-visualizer, .humidity-visualizer{
-    margin:2px;
+.weather-title, .weather-value, .temperature-visualizer, .humidity-visualizer {
+    margin: 2px;
 }
 
-.weather-info{
+.weather-info {
     display: flex;
     flex-direction: column;
 }
 
-.temperature-visualizer{
+.temperature-visualizer {
     background-image: url('common/images/temperature_range.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -462,7 +465,7 @@
     height: 30px;
 }
 
-.humidity-visualizer{
+.humidity-visualizer {
     background-image: url('common/images/bar_graph.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -471,7 +474,7 @@
     height: 30px;
 }
 
-.carousel-card{
+.carousel-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -482,69 +485,73 @@
     margin: 5px;
 }
 
-.carousel{
+.carousel {
     display: flex;
     flex-direction: column;
 }
 
-.carousel-header{
+.carousel-header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel-icon{
+.carousel-icon {
     width: 50px;
     height: 50px;
 }
 
-.carousel-title{
+.carousel-title {
     margin-left: 10px;
     width: 80%;
-    overflow: hidden ;
+    overflow: hidden;
     font-size: 10px;
 }
 
-.carousel-toggle{
+.carousel-toggle {
     width: 40px;
     height: 15px;
     margin: 0px;
 }
 
-.carousel-content{
+.carousel-content {
     width: 100%;
     height: 120px;
-    margin:10px;
+    margin: 10px;
 }
 
-.carousel-swiper{
+.carousel-swiper {
+    indicator-color: #ffffff;
+    indicator-selected-color: #0098FD;
+    indicator-size: 5px;
+    indicator-bottom: 10px;
 }
 
-.carousel-swiper image{
+.carousel-swiper image {
     border-radius: 10px;
 }
 
-.carousel-content-header{
+.carousel-content-header {
     position: absolute;
     width: 100%;
-    margin:10px;
+    margin: 10px;
 }
 
-.carousel-content-icon{
+.carousel-content-icon {
     width: 40px;
     height: 15px;
     position: absolute;
     left: 0px;
 }
 
-.carousel-content-time{
+.carousel-content-time {
     font-size: 10px;
     color: #ffffff;
     position: absolute;
     right: 0;
 }
 
-.weather-warning-card{
+.weather-warning-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -554,41 +561,41 @@
     border-radius: 10px;
 }
 
-.weather-warning{
+.weather-warning {
     display: flex;
     flex-direction: column;
 }
 
-.weather-warning-header{
+.weather-warning-header {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.weather-warning-icon{
+.weather-warning-icon {
     width: 60px;
     height: 60px;
 }
 
-.weather-warning-title{
+.weather-warning-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 10px;
 }
 
-.weather-warning-location{
+.weather-warning-location {
     display: flex;
     align-items: center;
 }
 
-.weather-warning-location-icon{
+.weather-warning-location-icon {
     width: 8px;
     height: 11px;
     margin-right: 5px;
 }
 
-.weather-warning-buttons{
+.weather-warning-buttons {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -596,7 +603,7 @@
     margin: 10px 0;
 }
 
-.weather-warning-day{
+.weather-warning-day {
     width: 60px;
     height: 38px;
     display: flex;
@@ -604,10 +611,10 @@
     justify-content: center;
     border-radius: 5px;
     font-size: 15px;
-    margin: 0 10px 0 0 ;
+    margin: 0 10px 0 0;
 }
 
-.weather-warning-week{
+.weather-warning-week {
     width: 65px;
     height: 38px;
     display: flex;
@@ -618,7 +625,7 @@
     margin: 0;
 }
 
-.weather-warning-weather{
+.weather-warning-weather {
     width: 150px;
     height: 80px;
     display: flex;
@@ -626,7 +633,7 @@
     align-items: center;
 }
 
-.weather-warning-info{
+.weather-warning-info {
     width: 50%;
     margin-left: 20px;
     display: flex;
@@ -634,28 +641,28 @@
     justify-content: center;
 }
 
-.weather-warning-date{
+.weather-warning-date {
     font-size: 8px;
 }
 
-.weather-warning-temperature{
+.weather-warning-temperature {
     font-size: 20px;
     margin: 2px 0;
 }
 
-.weather-warning-weather-type{
+.weather-warning-weather-type {
     font-size: 10px;
 }
 
-.weather-warning-clouds{
+.weather-warning-clouds {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.weather-warning-footer{
-    margin-top:10px;
+.weather-warning-footer {
+    margin-top: 10px;
     font-size: 10px;
     display: flex;
     flex-direction: column;
@@ -663,7 +670,7 @@
     align-items: center;
 }
 
-.error{
+.error {
     display: none;
     background-color: white;
     font-size: 15px;
@@ -672,30 +679,35 @@
     border-radius: 100px;
 }
 
-@media (device-type: phone){
-    .main-control-header-title{
+@media (device-type: phone) {
+    .main-control-header-title {
         width: 100px;
     }
-    .minus, .plus{
+
+    .minus, .plus {
         width: 60px;
         height: 72px;
     }
-    .sidebar{
+
+    .sidebar {
         display: none;
     }
-    .other-controls{
+
+    .other-controls {
         margin: 0;
     }
 }
 
-@media (device-type: wearable){
-    .main{
+@media (device-type: wearable) {
+    .main {
         display: none;
     }
-    .sidebar{
+
+    .sidebar {
         display: none;
     }
-    .error{
+
+    .error {
         display: flex;
         align-items: center;
         justify-content: center;
