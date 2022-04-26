@@ -41,65 +41,62 @@ export default {
         temperature: 0,
         humidity: 0,
         location: "Bangalore",
-        temperatureInCelsius:"18",
+        temperatureInCelsius: "18",
         weather: "Rainy",
         day: "Mon, Jan 01",
         alert_title: "Title",
         alert_desc: "Description"
     },
-    toggleRoom(room){
-        for(var i=0;i<5;i++){
-            if(room==0){
-                this.living_room_active=true;
-                this.dining_room_active=false;
-                this.bed_room_active=false;
-                this.bath_room_active=false;
-                this.backyard_room_active=false;
+    toggleRoom(room) {
+        for (var i = 0;i < 5; i++) {
+            if (room == 0) {
+                this.living_room_active = true;
+                this.dining_room_active = false;
+                this.bed_room_active = false;
+                this.bath_room_active = false;
+                this.backyard_room_active = false;
             }
-            if(room==1){
-                this.living_room_active=false;
-                this.dining_room_active=true;
-                this.bed_room_active=false;
-                this.bath_room_active=false;
-                this.backyard_room_active=false;
+            if (room == 1) {
+                this.living_room_active = false;
+                this.dining_room_active = true;
+                this.bed_room_active = false;
+                this.bath_room_active = false;
+                this.backyard_room_active = false;
             }
-            if(room==2){
-                this.living_room_active=false;
-                this.dining_room_active=false;
-                this.bed_room_active=true;
-                this.bath_room_active=false;
-                this.backyard_room_active=false;
+            if (room == 2) {
+                this.living_room_active = false;
+                this.dining_room_active = false;
+                this.bed_room_active = true;
+                this.bath_room_active = false;
+                this.backyard_room_active = false;
             }
-            if(room==3){
-                this.living_room_active=false;
-                this.dining_room_active=false;
-                this.bed_room_active=false;
-                this.bath_room_active=true;
-                this.backyard_room_active=false;
+            if (room == 3) {
+                this.living_room_active = false;
+                this.dining_room_active = false;
+                this.bed_room_active = false;
+                this.bath_room_active = true;
+                this.backyard_room_active = false;
             }
-            if(room==4){
-                this.living_room_active=false;
-                this.dining_room_active=false;
-                this.bed_room_active=false;
-                this.bath_room_active=false;
-                this.backyard_room_active=true;
+            if (room == 4) {
+                this.living_room_active = false;
+                this.dining_room_active = false;
+                this.bed_room_active = false;
+                this.bath_room_active = false;
+                this.backyard_room_active = true;
             }
         }
     },
-    decreaseTemp: function(){
-        if (this.temperature <= 16)
-        {
+    decreaseTemp: function () {
+        if (this.temperature <= 16) {
             console.log("Minimimum Temperature reached !");
         }
-        else
-        {
-            this.temperature-=.5;
+        else {
+            this.temperature -= .5;
             console.log("Temperature decreased by .5 degree !");
         }
     },
-    increaseTemp: function(){
-        if (this.temperature >= 31)
-        {
+    increaseTemp: function () {
+        if (this.temperature >= 31) {
             console.log("Maximum Temperature reached !");
         }
         else {
@@ -107,70 +104,69 @@ export default {
             console.log("Temperature increased by .25 degree !");
         }
     },
-    toggleLivingRoom: function() {
+    toggleLivingRoom: function () {
         this.living_room = !this.living_room;
         console.log("Living Room toggled !");
     },
-    toggleDryMode: function() {
+    toggleDryMode: function () {
         this.dry_mode = !this.dry_mode;
         console.log("Dry Mode toggled !");
     },
-    toggleCoolMode: function() {
+    toggleCoolMode: function () {
         this.cool_mode = !this.cool_mode;
         console.log("Cool Mode toggled !");
     },
-    toggleFanMode: function() {
+    toggleFanMode: function () {
         this.fan_mode = !this.fan_mode;
         console.log("Fan Mode toggled !");
     },
-    toggleTurboMode: function() {
+    toggleTurboMode: function () {
         this.turbo_mode = !this.turbo_mode;
         console.log("Turbo Mode toggled !");
     },
-    onNewDevicesClick: function() {
+    onNewDevicesClick: function () {
         console.log("Add New Devices Button clicked !");
     },
-    toggleSmartTV: function() {
+    toggleSmartTV: function () {
         this.smart_tv = !this.smart_tv;
         console.log("Smart TV toggled !");
     },
-    toggleAC: function() {
+    toggleAC: function () {
         this.ac = !this.ac;
         console.log("AC toggled !");
     },
-    toggleWashingMachine: function() {
+    toggleWashingMachine: function () {
         this.washing_machine = !this.washing_machine;
         console.log("Washing Machine toggled !");
     },
-    toggleRefrigerator: function() {
+    toggleRefrigerator: function () {
         this.refrigerator = !this.refrigerator;
         console.log("Refrigerator toggled !");
     },
-    toggleCarousel: function() {
+    toggleCarousel: function () {
         this.carousel = !this.carousel;
         console.log("Carousel toggled !");
     },
-    onDateClick: function() {
+    onDateClick: function () {
         console.log("Date Button clicked !");
     },
-    onWeekClick: function() {
+    onWeekClick: function () {
         console.log("Week Button clicked !");
     },
-    fetchData : function(){
+    fetchData: function () {
         let data;
         fetch.fetch({
-            url:'https://neumorphism-api.herokuapp.com/neumorphism/living_room',
-            responseType:"json",
+            url: 'https://neumorphism-api.herokuapp.com/neumorphism/living_room',
+            responseType: "json",
             method: 'GET',
-            success:function(resp)
-            {
+            success: function (resp) {
                 data = JSON.parse(resp.data);
             },
-            fail:(err,code) => {
-                console.log("fail data:"+ JSON.stringify(err));
-                console.log("fail code:"+ code)
+            fail: (err, code) => {
+                console.log("fail data:" + JSON.stringify(err));
+                console.log("fail code:" + code)
             },
-            complete: ()=>{
+            complete: () => {
                 this.username = data.username;
                 this.living_room_active = data.living_room_active;
                 this.dining_room_active = data.dining_room_active;
@@ -199,18 +195,17 @@ export default {
             }
         })
         fetch.fetch({
-            url:'https://weatherdbi.herokuapp.com/data/weather/bangalore',
-            responseType:"json",
+            url: 'https://weatherdbi.herokuapp.com/data/weather/bangalore',
+            responseType: "json",
             method: 'GET',
-            success:function(resp)
-            {
+            success: function (resp) {
                 data = JSON.parse(resp.data);
             },
-            fail:(err,code) => {
-                console.log("fail data:"+ JSON.stringify(err));
-                console.log("fail code:"+ code)
+            fail: (err, code) => {
+                console.log("fail data:" + JSON.stringify(err));
+                console.log("fail code:" + code)
             },
-            complete: ()=>{
+            complete: () => {
                 this.temperatureInCelsius = data.currentConditions.temp.c;
                 this.weather = data.currentConditions.comment;
             }
@@ -220,11 +215,11 @@ export default {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
         ];
         const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-        let month = this.$t('strings.'+monthNames[date.getMonth()])
-        let week = this.$t('strings.'+weekDays[date.getDay()])
-        this.day=week+", "+month+" "+(String(date.getDate()))
+        let month = this.$t('strings.' + monthNames[date.getMonth()])
+        let week = this.$t('strings.' + weekDays[date.getDay()])
+        this.day = week + ", " + month + " " + (String(date.getDate()))
     },
-    onInit(){
+    onInit() {
         this.fetchData();
     }
 }
