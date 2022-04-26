@@ -80,6 +80,7 @@
 .main{
     width: 600px;
     display: flex;
+    overflow: scroll;
     flex-direction: column;
     justify-content: center;
 }
@@ -118,7 +119,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow: scroll;
 }
 
 .rooms .room{
@@ -420,6 +421,7 @@
 .sidebar{
     width: 300px;
     display: flex;
+    overflow: scroll;
     flex-direction: column;
     justify-content: center;
     align-items: center;
